@@ -14,7 +14,7 @@ export const SubNavWrapper = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;
-height:16px;
+height:16.5px;
 width:100%;
 background-color:  #1F2128;
 `
