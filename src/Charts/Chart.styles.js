@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const CoinCharts = styled.div`
 display: flex;   
-justify-self: space-around;   
+justify-content: space-around;   
 align-self: center;
 border:1px solid #707070;
 `;
