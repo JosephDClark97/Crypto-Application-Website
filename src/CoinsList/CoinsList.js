@@ -9,7 +9,7 @@ export default class CoinsList extends Component{
     async CoinList(){
         const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category=cryptocurrency&order=market_cap_desc&per_page=10&page=1&sparkline=true&price_change_percentage=1h%2C7d'
         axios.get(url)
-        .then((res)=> console.log((this.setState({list: res.data}))))
+        .then((res)=> this.setState({list: res.data}))
         .catch((err)=> console.log(err))
             }
 
@@ -19,6 +19,20 @@ export default class CoinsList extends Component{
     render(){
         return(
             <div>
+            <div className="CoinHeader">
+          <div>#</div>
+          <div>Name</div>
+            <div>Price</div>
+        </div>
+        <div className="CoinScrollEnabler">  
+            {this.state.list.map((coin)=>{
+               return <div className="CoinListWrapper">
+                <p>{coin.market_cap_rank}</p>
+                <p>{coin.name}</p>
+                <p>{coin.current_price}</p>
+                </div>
+                })}
+        </div>
                 {this.state.list.map((coin)=>{
                return <p>{coin.name}</p> 
                 })}
