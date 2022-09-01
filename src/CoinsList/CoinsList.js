@@ -33,6 +33,9 @@ export default class CoinsList extends Component{
                 </div>
                 })}
         </div>
+                {this.state.list.map((coin)=>{
+               return <p>{coin.name}</p> 
+                })}
             </div>
         )
     }
