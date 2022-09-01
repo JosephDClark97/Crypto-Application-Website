@@ -10,7 +10,9 @@ function App() {
       <Nav />
       <SubNav />
       <Charts />
-      <CoinsList />
+      <div className="CoinTab">
+        <CoinsList />
+      </div>
     </div>
   );
 }
