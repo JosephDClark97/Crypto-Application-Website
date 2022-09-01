@@ -10,11 +10,10 @@ export default class Charts extends Component{
     render(){
         return(
             <div>
-                            <CoinCharts>
+              <CoinCharts>
                 <PriceVolChart>This is the prive volatility</PriceVolChart>
                 <VolumeChart>This is the volume</VolumeChart>
             </CoinCharts>
-
             </div>
         )
     }
