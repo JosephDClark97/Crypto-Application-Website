@@ -19,7 +19,7 @@
   display:flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   background-color:#191B1F;
   border: 0.5px solid #707070;
   margin:1rem;
@@ -28,17 +28,28 @@
 
 .CoinHeader{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  justify-content:space-around;
+  flex-direction:row;
+  border: 1px solid #707070;
 }
 
 .CoinListWrapper{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  justify-content:space-around;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
   width: 100%;
 }
 
 .CoinScrollEnabler{
   height:30vh;
   overflow:scroll;
+}
+
+.Green{
+  color:green;
+}
+
+.Red{
+  color:red;
 }
