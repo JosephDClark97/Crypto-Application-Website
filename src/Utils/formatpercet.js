@@ -1,5 +1,3 @@
-
-
 export const formatPercent = (num) => {
     if (num === 0) {
       return "-";
