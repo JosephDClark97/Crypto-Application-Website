@@ -10,7 +10,7 @@ flex: 1;
 border-radius:5px;
 border:0.5px solid #707070;
 box-shadow:3px 3px 3px #707070;
-background-color:${props=>props.theme.primary};
+background-color: #1F2128;
 color:#fff;
 `;
 
@@ -31,7 +31,7 @@ justify-content: center;
 `;
 
 export const SearchedDiv = styled.div`
-background-color: ${props=>props.theme.primary};
+background-color: ${(props) => props.theme.tertiary};
 width: 380px;
 height: 40px;
 border-radius: 10px;
@@ -49,10 +49,10 @@ background: transparent;
 border: none;
 outline: none;
 padding: 8px;
-color: ${props=>props.theme.primary};
+color: ${(props) => props.theme.mainFont};
 font-size: 17px;
 ::placeholder {
-  color:${props=>props.theme.primary};
+  color: ${(props) => props.theme.mainFont};
 }
 `;
 
@@ -67,10 +67,9 @@ export const ToggleThemeButton = styled.div`
 display: flex;
 algin-items: center;
 justify-content: center;
-background-color:${props=>props.theme.primary};
+background-color: ${(props) => props.theme.tertiary};
 padding: 15px 10px;
 border-radius: 10px;
 margin-right: 25px;
 cursor: pointer;
-color:green;
 `;

@@ -6,8 +6,8 @@ flex-direction:column;
 width:800px;
 height:25px;
 border:1px solid #707070;
-background-color: ${props=>props.theme.primary};
-color:${props=>props.theme.secondary};
+background-color: #1F2128;
+color:#fff;
 `;
 
 export const SubNavWrapper = styled.div`
@@ -16,5 +16,5 @@ justify-content:center;
 align-items:center;
 height:16.5px;
 width:100%;
-background-color:  ${props=>props.theme.primary};
+background-color:  #1F2128;
 `

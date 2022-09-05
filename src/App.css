@@ -3,17 +3,28 @@
   margin:0;
 }
 
+.App {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align: center;
+  background-color:#1F2128;
+  font-family:Poppins;
+  color:#fff;
+}
 
-/* .CoinTab{
+
+.CoinTab{
   display:flex;
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  background:${props=>props.theme.primary};
-  border: 0.5px solid gray;
+  background-color:#191B1F;
+  border: 0.5px solid #707070;
   margin:1rem;
   border-radius:8px;
-  color:white;
+  color:#fff
 }
 
 .CoinHeader{
@@ -21,7 +32,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   justify-content:space-around;
   flex-direction:row;
-  border: 1px solid gray;
+  border: 1px solid #707070;
 }
 
 .CoinListWrapper{
@@ -35,14 +46,6 @@
   height:30vh;
   overflow:scroll;
 }
-
-.Green{
-  color:green;
-}
-
-.Red{
-  color:red;
-} */
 
 .Green{
   color:green;
