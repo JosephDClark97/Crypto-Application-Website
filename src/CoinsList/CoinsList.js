@@ -1,8 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import {formatPercent} from '../utils/formatpercet';
 import {convertNumber} from '../utils/convertnumber';
-import {Routes, Route, Link} from 'react-router-dom';
-import Coin from '../Routes/coin'
+import {Link} from 'react-router-dom';
+import Coin from '../Coin/coin';
+import {
+    CoinTab,
+    CoinHeader,
+    CoinListWrapper,
+    CoinScrollEnabler,
+} from './CoinsList.styles'
 
 export default function CoinsList() {
     const [list, setList] = useState([])
@@ -22,10 +28,10 @@ export default function CoinsList() {
     }, [])
 
         return(
-            <div>
-            <div className="CoinHeader">
-          <div>#</div>
-          <div>Name</div>
+            <CoinTab>
+        <CoinHeader>
+        <div>#</div>
+            <div>Name</div>
             <div>Price</div>
             <div>1h%</div>
             <div>24h%</div>
@@ -33,11 +39,11 @@ export default function CoinsList() {
             <div>24h Volume/Market Cap</div>
             <div>Circulating/Total Supply</div>
             <div>Last 7d</div>
-        </div>
-        <div className="CoinScrollEnabler">  
+        </CoinHeader>
+        <CoinScrollEnabler>  
             {list?.map((coin)=>{
                return <Link element={<Coin/>} to={`/Coin/${coin.id}`}>
-               <div className="CoinListWrapper">
+               <CoinListWrapper>
                 <p>{coin.market_cap_rank}</p>
                 <p><img width={33.54} height={33.54} alt="" src={coin.image} />{coin.name}</p>
                 <p>${coin.current_price}</p>
@@ -52,10 +58,10 @@ export default function CoinsList() {
                 <p>{convertNumber(parseInt(coin.total_volume / coin.price_change_percentage_24h))} ${coin.price * coin.total_supply === NaN ? "∞" : convertNumber(parseInt(coin?.total_supply))}</p>
                 <p>{convertNumber(parseInt(coin.circulating_supply))} {convertNumber(parseInt(coin.total_supply))}</p>
                 <p></p>
-                </div>
+                </CoinListWrapper>
                </Link>
                 })}
-        </div>
-        </div>
+        </CoinScrollEnabler>
+        </CoinTab>
         )
     }
