@@ -10,7 +10,8 @@ import  {NavBarContainer,
     CurrencyDropDown,
     Dropdown,
     ToggleThemeButton
-} from './NavBar.styles'
+} from './NavBar.styles';
+import {Link} from 'react-router-dom';
 
 
 
@@ -21,15 +22,15 @@ export default class Nav extends Component{
         hasError: false,
     }
 
-    // async await
 
     render(){
         return(
             <NavBarContainer>
                     <LeftNav>
-                        <CoinsLink>Coins
+                        <CoinsLink>
+                        <Link to="/coins">Coins</Link>
                         </CoinsLink>
-                        <PortfolioLink>Portfolio</PortfolioLink>
+                        <PortfolioLink><Link to="/Portfolio">Portfolio</Link></PortfolioLink>
                     </LeftNav>
                     <RightNav>
                         <SearchedDiv>
@@ -39,7 +40,8 @@ export default class Nav extends Component{
                             <CurrencyDropDown>
                                 <Dropdown>USD</Dropdown>
                             </CurrencyDropDown>
-                            <ToggleThemeButton>Toggle</ToggleThemeButton>
+                            <ToggleThemeButton onClick={()=>this.props.themeToggle()}
+                            >Toggle</ToggleThemeButton>
                     </RightNav>
              </NavBarContainer>
             )

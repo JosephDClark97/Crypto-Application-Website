@@ -9,7 +9,6 @@ export default function Coins() {
             const url = `https://api.coingecko.com/api/v3/coins/${params.coinid}`;
             const res = await fetch(url)
             const data = await res.json()
-            console.log(data)
             setCoin(data)
         }catch(err){
            console.log(err)
