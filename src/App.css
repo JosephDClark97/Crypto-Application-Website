@@ -51,3 +51,19 @@
 .Red{
   color:red;
 }
+
+.OrganizeCharts{
+  display:flex;
+  flex-direction:row-reverse;
+  justify-content: center;
+  align-items: center;
+  width:90%;
+}
+
+.ChartWrapper{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin:1rem;
+}
+

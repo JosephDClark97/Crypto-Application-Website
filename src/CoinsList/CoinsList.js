@@ -42,7 +42,7 @@ export default function CoinsList() {
         </CoinHeader>
         <CoinScrollEnabler>  
             {list?.map((coin)=>{
-               return <Link element={<Coin/>} to={`/Coin/${coin.id}`}>
+              {return (
                <CoinListWrapper>
                 <p>{coin.market_cap_rank}</p>
                 <p><img width={33.54} height={33.54} alt="" src={coin.image} />{coin.name}</p>
@@ -59,8 +59,8 @@ export default function CoinsList() {
                 <p>{convertNumber(parseInt(coin.circulating_supply))} {convertNumber(parseInt(coin.total_supply))}</p>
                 <p></p>
                 </CoinListWrapper>
-               </Link>
-                })}
+              )
+            }})} 
         </CoinScrollEnabler>
         </CoinTab>
         )
