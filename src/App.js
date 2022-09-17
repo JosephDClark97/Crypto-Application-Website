@@ -21,23 +21,22 @@ function App() {
     <ThemeProvider theme={theme}>
     <Container>
       <BrowserRouter>
-      <NavigationList themeToggle={toggleTheme} />
+      <NavigationList toggleTheme={toggleTheme} />
       <Routes>
       <Route exact path="/" element="">Home</Route>
       <Route path="/Portfolio" element="">Portfolio</Route>
-      {/* <Route path="/coins">Coins</Route> */}
       <Route path="/coin/:coinid" element={<Coin />}></Route>
     </Routes> 
       </BrowserRouter>
       <div className="OrganizeCharts">
         <div className="ChartWrapper">
-        <VolumeChart></VolumeChart>
+        <VolumeChart />
         </div>
         <div className="ChartWrapper">
-        <LineChart></LineChart>
+        <LineChart />
         </div>
       </div>
-      <CoinsList></CoinsList>
+      <CoinsList />
     </Container>
     </ThemeProvider>
     </>
