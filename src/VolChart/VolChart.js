@@ -76,9 +76,9 @@ export default function Charts() {
             };
         
 
-        return(
-            <div>
-            <Bar data={data} options={options} />
-            </div>
+            return(
+                <div>
+                    <Bar data={data} options={options} />
+                </div>
         )
 }
