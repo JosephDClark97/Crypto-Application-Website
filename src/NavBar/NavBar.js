@@ -25,8 +25,8 @@ export default class Nav extends Component{
 
     render(){
         return(
-            <NavBarContainer>
-                    <LeftNav>
+        <NavBarContainer>
+                <LeftNav>
                         <CoinsLink>
                         <Link to="/coins">Coins</Link>
                         </CoinsLink>
@@ -38,12 +38,12 @@ export default class Nav extends Component{
                             <SearchInput placeholder={"Search..."} />
                         </SearchedDiv>
                             <CurrencyDropDown>
-                                <Dropdown>USD</Dropdown>
+                            <Dropdown>USD</Dropdown>
                             </CurrencyDropDown>
-                            <ToggleThemeButton onClick={()=>this.props.themeToggle()}
+                            <ToggleThemeButton onClick={this.props.theme}
                             >Toggle</ToggleThemeButton>
-                    </RightNav>
-             </NavBarContainer>
+                </RightNav>
+            </NavBarContainer>
             )
         
     }
